@@ -1,1 +1,1 @@
-from saenews import sae
+from saenews.saenews import sae

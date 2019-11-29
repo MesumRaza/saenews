@@ -1,4 +1,5 @@
 from distutils.core import setup
+#from setuptools import setup, find_packages
 setup(
   name = 'saenews',         # How you named your package folder (MyLib)
   packages = ['saenews'],   # Chose the same as "name"
