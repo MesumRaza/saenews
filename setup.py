@@ -9,7 +9,7 @@ setup(
   author = 'saenews',                   # Type in your name
   author_email = 'contact@advaitlabs.com',      # Type in your E-Mail
   url = 'https://github.com/dheerajmpai/saenews/',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/dheerajmpai/saenews/archive/v_020.tar.gz',  
+  download_url = 'https://github.com/dheerajmpai/saenews/archive/v_022.tar.gz',  
   keywords = ['OPENCV', 'IMAGE PROCESSING', 'NEWS'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'validators',
