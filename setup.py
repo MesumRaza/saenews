@@ -12,7 +12,6 @@ setup(
   download_url = 'https://github.com/dheerajmpai/saenews/archive/v_022.tar.gz',  
   keywords = ['OPENCV', 'IMAGE PROCESSING', 'NEWS'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
-          'validators',
           'beautifulsoup4',
           'opencv-contrib-python',
           'opencv-python',
