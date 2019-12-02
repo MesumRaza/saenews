@@ -7,12 +7,16 @@ import cv2
 import glob
 import datetime
 
-class sae:
-    def add_alpha(rgb_data):
+class sae():
+    awa = 4
+    input_file = ''
+#     def input_file(self,inp):
+#         self.input_file = inp
+    def add_alpha(self,rgb_data):
         rgba = cv2.cvtColor(rgb_data, cv2.COLOR_RGB2RGBA)
         return (rgba)
     # Reading the Image
-    def add_border(input_file='', width='', color='black'):
+    def add_border(self,input_file='', width='', color='black'):
         if input_file == '':
             input_file = sorted(glob.glob('captioned*'))[-1]
 
@@ -26,8 +30,7 @@ class sae:
         print ('imaged-with-border_'+input_file)
         return (img_with_border)
 
-    def get_vignet_face(input_arg, output_file = '',fxy=('','')):
-
+    def get_vignet_face(self, input_arg, output_file = '',fxy=('','')):
         if  (type(input_arg) == str):
             img = cv2.imread(input_arg,1)
         elif (type(input_arg) == np.ndarray):
@@ -81,7 +84,7 @@ class sae:
             cv2.imwrite(output_file, zeros)
         return (zeros)
 
-    def put_caption(caption,input_file='',output_file='', caption_width=50, xy = ('',''), text_font = './fonts/PTS75F.ttf', font_size=50,font_color='rgba(255,255,255,255)',):
+    def put_caption(self,caption,input_file='',output_file='', caption_width=50, xy = ('',''), text_font = './fonts/PTS75F.ttf', font_size=50,font_color='rgba(255,255,255,255)',):
         wrapper = textwrap.TextWrapper(width=caption_width) 
         word_list = wrapper.wrap(text=caption)
         print (word_list)
@@ -116,7 +119,7 @@ class sae:
         print('captioned' + input_file)
         return(image)
 
-    def put_logo(input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)',
+    def put_logo(self, input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)',
                 border = ('','')):
 
         if input_file == '':
@@ -179,3 +182,4 @@ class sae:
     #     image.save('captioned' + input_file)
     #     print('captioned' + input_file)
     #     return(image)
+
