@@ -2,11 +2,12 @@ import cv2
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageEnhance
 import matplotlib.pyplot as plt
 import numpy as np
-import textwrap 
+import textwrap
 import cv2
 import glob
 import datetime
 import requests
+
 
 class sae():
     awa = 4
@@ -17,7 +18,7 @@ class sae():
         rgba = cv2.cvtColor(rgb_data, cv2.COLOR_RGB2RGBA)
         return (rgba)
     # Reading the Image
-    def add_border(self,input_file='', width='', color='black'):
+    def add_border(self,input_file='',output_file='', width='', color='black'):
         if input_file == '':
             input_file = sorted(glob.glob('captioned*'))[-1]
 
@@ -27,9 +28,11 @@ class sae():
             width = W//40
         print (W)    
         img_with_border = ImageOps.expand(img,border=W//40,fill=color)
-        img_with_border.save('imaged-with-border_'+input_file)
-        print ('imaged-with-border_'+input_file)
-        return (img_with_border)
+        if output_file == '':
+            output_file = 'imaged-with-border_'+input_file
+        img_with_border.save(output_file)
+#         print ()
+        return (output_file)
 
     def get_vignet_face(self, input_arg, output_file = '',fxy=('','')):
         if  (type(input_arg) == str):
@@ -86,11 +89,9 @@ class sae():
 
         # zeros = add_alpha(zeros)
         if output_file == '' :
-
-            cv2.imwrite('vignet_out'+ str(datetime.datetime.now()) + '.png',zeros)
-        else :
-            cv2.imwrite(output_file, zeros)
-        return (zeros)
+            output_file = 'vignet_out'+ str(datetime.datetime.now()) + '.png'
+        cv2.imwrite(output_file,zeros)
+        return (output_file)
 
     def put_caption(self,caption,input_file='',output_file='', caption_width=50, xy = ('',''), text_font = './fonts/PTS75F.ttf', font_size=50,font_color='rgba(255,255,255,255)',):
         wrapper = textwrap.TextWrapper(width=caption_width) 
@@ -123,9 +124,11 @@ class sae():
         else :
             x,y = xy
         draw.text((x, y), caption_new, fill=font_color, font=font)
-        image.save('captioned' + input_file)
-        print('captioned' + input_file)
-        return(image)
+        if output_file == '':
+            output_file = 'captioned' + input_file
+        image.save(output_file)
+#         print('captioned' + input_file)
+        return(output_file)
 
     def put_logo(self, input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)',
                 border = ('','')):
@@ -183,9 +186,10 @@ class sae():
         tw_text_size,h = draw.textsize(logo, font=font)
         x,y = border[0] + img_w,  ht-border[1]
         draw.text((x,y),logo,font=font)
-
-        background.save('final_'+input_file)
-        return (background)
+        if output_file == '':
+            output_file = 'final_'+input_file
+        background.save(output_file)
+        return (output_file)
     #     draw.text((x, y), caption_new, fill=font_color, font=font)
     #     image.save('captioned' + input_file)
     #     print('captioned' + input_file)
