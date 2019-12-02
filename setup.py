@@ -15,7 +15,8 @@ setup(
           'beautifulsoup4',
           'opencv-contrib-python',
           'Pillow',
-          'matplotlib'
+          'matplotlib',
+          'requests'
           
       
       ],

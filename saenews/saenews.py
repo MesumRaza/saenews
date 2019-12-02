@@ -6,6 +6,7 @@ import textwrap
 import cv2
 import glob
 import datetime
+import requests
 
 class sae():
     awa = 4
@@ -44,7 +45,14 @@ class sae():
         elif (fxy[0] == '' or fxy[1] == ''):
             # Finding the Face 
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
-            face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') 
+            try :
+                face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') 
+            except :
+                requests.get('https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml')
+                ff = open('haarcascade_frontalface_default.xml','w')
+                ff.write(str(r.content.decode("utf-8")))
+                ff.close()
+            
             faces = face_cascade.detectMultiScale(gray, 1.3, 5) 
 
             try :
@@ -153,11 +161,11 @@ class sae():
 
         tw_img = tw_img.resize((font_size,font_size))
         img_w, img_h = tw_img.size
-        # background = Image.new('RGBA', (290, 290), (0, 0, 255,0))
+#         background = Image.new('RGBA', (290, 290), (0, 0, 255,0))
         bg_w, bg_h = background.size
         ht = background.size[1] - tw_img.size[1]
 
-        logo = 'awakenedindian.in'
+        logo = 'www.sae.news'
         font = ImageFont.truetype(text_font, size=font_size)
         tw_text_size,h = draw.textsize(logo, font=font)
 
@@ -170,7 +178,7 @@ class sae():
         draw.text((x,y),logo,font=font)
 
         #
-        logo = ' Awakened_Ind'
+        logo = 'SouthAsianXpres'
         font = ImageFont.truetype(text_font, size=font_size)
         tw_text_size,h = draw.textsize(logo, font=font)
         x,y = border[0] + img_w,  ht-border[1]
