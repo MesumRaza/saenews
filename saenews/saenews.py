@@ -10,7 +10,7 @@ import requests
 
 
 class sae():
-    awa = 4
+
     input_file = ''
 #     def input_file(self,inp):
 #         self.input_file = inp
@@ -27,7 +27,7 @@ class sae():
         if width == '':
             width = W//40
         print (W)    
-        img_with_border = ImageOps.expand(img,border=W//40,fill=color)
+        img_with_border = ImageOps.expand(img,border=width,fill=color)
         if output_file == '':
             output_file = 'imaged-with-border_'+input_file
         img_with_border.save(output_file)
