@@ -105,7 +105,7 @@ class sae():
                 print ('Please put a valid Input File')
                 return(0)
         if len(word_list) == 1:
-            caption_new = word_list
+            caption_new = word_list[0]
         elif len(word_list) == 0:
             caption_new = ' '    
         else :
