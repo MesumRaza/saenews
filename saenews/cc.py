@@ -249,7 +249,10 @@ def title_tagline_news(title,tag_line,input_file):
     out = a.add_border(width=border_width,color='red',input_file=out,  )
 
     out = a.put_logo(input_file=out,border=logo_border)
-    return(out)import cv2
+    return(out)
+
+"""
+import cv2
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageEnhance
 import matplotlib.pyplot as plt
 import numpy as np
@@ -463,3 +466,4 @@ class saeinsta(sae2):
             output_file = 'out' + input_file
         img_cut.save(output_file)
         return (output_file)
+"""
