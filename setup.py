@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
   name = 'saenews',         # How you named your package folder (MyLib)
   packages = ['saenews'],   # Chose the same as "name"
-  version = '0.3.4',      # 
+  version = '0.3.5',      # 
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'required code for saenews',   # Give a short description about your library
   author = 'saenews',                   # Type in your name
