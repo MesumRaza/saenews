@@ -28,6 +28,12 @@ wget https://github.com/dheerajmpai/saenews/raw/master/utils.zip
 unzip utils.zip
 
 ```
+# Issues and feature requests
+
+If you find any bug or if you find any feature missing. Raise an issue ![here](https://github.com/dheerajmpai/saenews/issues)
+
+
+# Example
 
 Download the image you want to modify 
 
