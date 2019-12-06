@@ -1,9 +1,8 @@
 
 # Quickstart
 
-## Installation
+### Installation
 
-### Install via pip
 
 Install via pip
 
