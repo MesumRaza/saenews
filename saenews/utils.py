@@ -1,6 +1,6 @@
 from PIL import Image, ImageFont, ImageDraw
 import cv2
-from sae2 import sae2
+from saenews.sae2 import sae2
 import datetime
 
 

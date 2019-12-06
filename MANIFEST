@@ -3,3 +3,4 @@ setup.cfg
 setup.py
 saenews/sae2.py
 saenews/saenews.py
+saenews/utils.py
