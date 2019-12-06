@@ -43,3 +43,7 @@ title_tagline_news(title='Title',tag_line='Tag Line',input_file='image.jpg')
 Original Image 
 
 ![alt text](http://sae.news/developer_tools/qq.jpg)
+
+Final Image
+
+![alt text](http://sae.news/developer_tools/qq.png)
