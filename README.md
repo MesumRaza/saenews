@@ -1,4 +1,6 @@
 
+[![Downloads](https://pepy.tech/badge/saenews)](https://pepy.tech/project/saenews)
+
 # Quickstart
 
 ### Installation

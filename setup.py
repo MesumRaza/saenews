@@ -3,9 +3,9 @@ import os
 #from setuptools import setup, find_packages
 setup(
 
-  name = 'saenews',        
-  packages = ['saenews','saenews.hello'],  
-  version = '0.11.1',       
+  name = 'next',        
+  packages = ['saenews'],  
+  version = '1.0.1',       
   license='MIT',        
   description = 'required code for sae.news',   
   author = 'saenews',        
