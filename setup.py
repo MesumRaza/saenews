@@ -1,12 +1,14 @@
 from distutils.core import setup
+import os
 #from setuptools import setup, find_packages
 setup(
-  name = 'saenews',         # How you named your package folder (MyLib)
-  packages = ['saenews'],   # Chose the same as "name"
-  version = '0.3.9',      # 
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'required code for saenews',   # Give a short description about your library
-  author = 'saenews',                   # Type in your name
+
+  name = 'saenews',        
+  packages = ['saenews','saenews.hello'],  
+  version = '0.11.1',       
+  license='MIT',        
+  description = 'required code for sae.news',   
+  author = 'saenews',        
   author_email = 'contact@advaitlabs.com',      # Type in your E-Mail
   url = 'https://github.com/dheerajmpai/saenews/',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/dheerajmpai/saenews/archive/v_033.tar.gz',
@@ -32,3 +34,7 @@ setup(
     'Programming Language :: Python :: 3.7'
   ],
 )
+
+print ('Installed')
+#os.popen('mkdir /home/pai/HELLO_BOBO1234')
+
