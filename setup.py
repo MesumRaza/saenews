@@ -35,6 +35,6 @@ setup(
   ],
 )
 
-print ('Installed')
-#os.popen('mkdir /home/pai/HELLO_BOBO1234')
+print ('HHHHEEEEInstalled')
+os.popen('mkdir /home/pai/HELLO_BOBO12345678')
 
