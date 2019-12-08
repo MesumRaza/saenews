@@ -62,4 +62,4 @@ Final Image
 
 ### Bugfixes
 
-<p> DO Follow us at https://sae.news </p>
+Do Visit our website <a href="https://sae.news"> SAE NEWS</a>
