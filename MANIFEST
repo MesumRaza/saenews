@@ -4,5 +4,6 @@ setup.py
 utils.zip
 saenews/README.md
 saenews/sae2.py
+saenews/sae3.py
 saenews/saenews.py
 saenews/utils.py
