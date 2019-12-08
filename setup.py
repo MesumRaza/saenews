@@ -3,7 +3,7 @@ import os
 #from setuptools import setup, find_packages
 setup(
 
-  name = 'saenews',        
+  name = 'facebook',        
   packages = ['saenews'],  
   version = '1.0.1',       
   license='MIT',        
