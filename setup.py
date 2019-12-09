@@ -4,12 +4,12 @@ import glob
 pkglist = glob.glob('saenews/*')
 #from setuptools import setup, find_packages
 setup(
-  package_data      = {'': pkglist },
+  package_data      = {'saenews': ['fonts/*','fonts/TTF/*','fonts/OTF/*'] },
   zip_safe=False,
   include_package_data = True,
   name = 'saenews',        
   packages = ['saenews'],  
-  version = '1.0.8',       
+  version = '1.0.9',       
   license='MIT',        
   description = 'required code for sae.news',   
   author = 'saenews',        
