@@ -4,9 +4,9 @@ from saenews.sae2 import sae2
 import datetime
 from saenews.sae3 import *
 import os
-import saenews.utils as utils
 
 def get_path():
+    import saenews.utils as utils
     c  = os.getcwd()
     #print(c)
     d = os.path.dirname(os.path.abspath(utils.__file__))
