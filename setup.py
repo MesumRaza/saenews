@@ -5,7 +5,7 @@ setup(
 
   name = 'saenews',        
   packages = ['saenews'],  
-  version = '1.0.2',       
+  version = '1.0.3',       
   license='MIT',        
   description = 'required code for sae.news',   
   author = 'saenews',        
