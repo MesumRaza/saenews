@@ -50,7 +50,7 @@ def poster(title,tag_line,input_file, output_file=''):
     out = put_caption(input_file=out, caption=tag_line,caption_width=caption_width,font_size=font_size, xy = xy_tagline, text_font=text_font)
     out = add_border(width=border_width,color='red',input_file=out,  )
     logo_font = repo_path + '/fonts/ChunkFive-Regular.otf'
-    out = put_logo(input_file=out,border=logo_border, output_file=output_file)
+    out = put_logo(input_file=out,border=logo_border, output_file=output_file, text_font=logo_font)
     return(out)
 
 
