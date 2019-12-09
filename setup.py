@@ -2,10 +2,10 @@ from distutils.core import setup
 import os
 #from setuptools import setup, find_packages
 setup(
-
+  include_package_data=True
   name = 'saenews',        
   packages = ['saenews'],  
-  version = '1.0.6',       
+  version = '1.0.8',       
   license='MIT',        
   description = 'required code for sae.news',   
   author = 'saenews',        
