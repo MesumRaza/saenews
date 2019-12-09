@@ -7,13 +7,12 @@ import os
 
 def get_path():
     import saenews.utils as utils
-    c  = os.getcwd()
-    #print(c)
     d = os.path.dirname(os.path.abspath(utils.__file__))
     
-    return((c,d))
+    return(d)
 
 def poster(title,tag_line,input_file, output_file=''):
+    repo_path = get_path()
     if output_file == '':
         output_file = str(datetime.datetime.now()) + '.png'
     # Do not Remove # Class Initiation
@@ -29,7 +28,7 @@ def poster(title,tag_line,input_file, output_file=''):
 
     ## For the Title
     xy = (W//28,round(H/1.5))
-    text_font='./fonts/OTF/Akrobat-Black.otf'
+    text_font=repo_path + '/fonts/OTF/Akrobat-Black.otf'
     font_size = W//25 # Font Size Enter Manually if required
     caption_width = W//25  # Width of the caption. Reduce if the text is going outside the image
 
@@ -43,7 +42,7 @@ def poster(title,tag_line,input_file, output_file=''):
     out = get_vignet_face('_resize.png',fxy='centre' )
     out = put_caption(input_file=out, caption=title,caption_width=caption_width,font_size=font_size, xy = xy, text_font=text_font)
 
-    text_font='./fonts/PTS56F.ttf'
+    text_font=repo_path + '/fonts/PTS56F.ttf'
     font_size = W//36 # Font Size Enter Manually if required
     # xy_tagline = (xy[0], xy[1]+ font_size+10)
     xy_tagline = (xy[0], xy[1]+h*2)
@@ -72,7 +71,7 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
 
     ## For the Title
     xy = (W//28,round(H/1.5))
-    text_font='./fonts/OTF/Akrobat-Black.otf'
+    text_font=repo_path + '/fonts/OTF/Akrobat-Black.otf'
     font_size = W//25 # Font Size Enter Manually if required
     caption_width = W//25  # Width of the caption. Reduce if the text is going outside the image
 
@@ -86,7 +85,7 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     out = a.get_vignet_face('_resize.png',fxy='centre' )
     out = a.put_caption(input_file=out, caption=title,caption_width=caption_width,font_size=font_size, xy = xy, text_font=text_font)
 
-    text_font='./fonts/PTS56F.ttf'
+    text_font = repo_path + '/fonts/PTS56F.ttf'
     font_size = W//36 # Font Size Enter Manually if required
     # xy_tagline = (xy[0], xy[1]+ font_size+10)
     xy_tagline = (xy[0], xy[1]+h*2)
