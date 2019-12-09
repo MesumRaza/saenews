@@ -1,2 +1,4 @@
 include saenews/README.md
-include utils.zip
+include saenews/*
+include saenews/fonts/*
+include saenews/SM/*
