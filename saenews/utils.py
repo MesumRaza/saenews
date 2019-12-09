@@ -5,7 +5,7 @@ import datetime
 from saenews.sae3 import *
 
 
-def ttn(title,tag_line,input_file, output_file=''):
+def poster(title,tag_line,input_file, output_file=''):
     if output_file == '':
         output_file = str(datetime.datetime.now()) + '.png'
     # Do not Remove # Class Initiation
