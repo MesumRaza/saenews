@@ -3,7 +3,12 @@ import cv2
 from saenews.sae2 import sae2
 import datetime
 from saenews.sae3 import *
+import os
 
+def get_path():
+    c  = os.getcwd()
+    print(c)
+    return(c)
 
 def poster(title,tag_line,input_file, output_file=''):
     if output_file == '':
