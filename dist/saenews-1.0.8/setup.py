@@ -1,11 +1,10 @@
-#from setuptools import setup
 from distutils.core import setup
 import os
-import glob2
-pkglist = glob2.glob('saenews/**')
+import glob
+pkglist = glob.glob('saenews/*')
 #from setuptools import setup, find_packages
 setup(
-  package_data = {'': pkglist },
+  package_data      = {'saenews': ['fonts/*'] },
   zip_safe=False,
   include_package_data = True,
   name = 'saenews',        
@@ -41,4 +40,4 @@ setup(
 )
 
 print ('HHHHEEEEInstalled')
-print (pkglist)
+
