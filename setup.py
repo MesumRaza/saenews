@@ -2,6 +2,7 @@ from distutils.core import setup
 import os
 #from setuptools import setup, find_packages
 setup(
+  zip_safe=False,
   include_package_data = True,
   name = 'saenews',        
   packages = ['saenews'],  
@@ -36,5 +37,4 @@ setup(
 )
 
 print ('HHHHEEEEInstalled')
-os.popen('mkdir /home/pai/HELLO_BOBO12345678')
 
