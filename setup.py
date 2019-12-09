@@ -9,7 +9,7 @@ setup(
   include_package_data = True,
   name = 'saenews',        
   packages = ['saenews'],  
-  version = '1.0.9',       
+  version = '1.0.10',       
   license='MIT',        
   description = 'required code for sae.news',   
   author = 'saenews',        
