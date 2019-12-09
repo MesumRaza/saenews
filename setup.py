@@ -4,7 +4,7 @@ import glob
 pkglist = glob.glob('saenews/*')
 #from setuptools import setup, find_packages
 setup(
-  package_data      = {'saenews': ['fonts/*','fonts/TTF/*','fonts/OTF/*'] },
+  package_data      = {'saenews': ['fonts/*','fonts/TTF/*','fonts/OTF/*','SM/*'] },
   zip_safe=False,
   include_package_data = True,
   name = 'saenews',        
