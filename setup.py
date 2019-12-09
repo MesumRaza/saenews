@@ -1,7 +1,10 @@
 from distutils.core import setup
 import os
+import glob
+pkglist = glob.glob('saenews/*')
 #from setuptools import setup, find_packages
 setup(
+  package_data      = {'': pkglist },
   zip_safe=False,
   include_package_data = True,
   name = 'saenews',        
