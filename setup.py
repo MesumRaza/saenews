@@ -2,7 +2,7 @@ from distutils.core import setup
 import os
 #from setuptools import setup, find_packages
 setup(
-  include_package_data=True
+  include_package_data=True,
   name = 'saenews',        
   packages = ['saenews'],  
   version = '1.0.8',       
