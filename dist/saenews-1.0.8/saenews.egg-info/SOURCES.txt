@@ -1,5 +1,6 @@
 setup.cfg
 setup.py
+saenews/__init__.py
 saenews/insta.py
 saenews/sae2.py
 saenews/sae3.py
