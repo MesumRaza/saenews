@@ -2,6 +2,7 @@
 setup.cfg
 setup.py
 saenews/README.md
+saenews/__init__.py
 saenews/haarcascade_frontalface_default.xml
 saenews/insta.py
 saenews/sae2.py
@@ -10,7 +11,6 @@ saenews/sae3.py~
 saenews/saenews.py
 saenews/utils.py
 saenews/utils.py~
-saenews/utils.zip
 saenews/SM/fb.png
 saenews/SM/search-cliparts.html
 saenews/SM/tw.png
