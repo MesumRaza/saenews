@@ -38,6 +38,7 @@ def add_border(input_file='',output_file='', width='', color='black'):
     return (output_file)
 
 def get_vignet_face( input_arg, output_file = '',fxy=('','')):
+    repo_path = get_path()
     if  (type(input_arg) == str):
         img = cv2.imread(input_arg,1)
     elif (type(input_arg) == np.ndarray):
@@ -54,11 +55,17 @@ def get_vignet_face( input_arg, output_file = '',fxy=('','')):
         try :
             face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') 
         except :
-            requests.get('https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml')
-            ff = open('haarcascade_frontalface_default.xml','w')
-            ff.write(str(r.content.decode("utf-8")))
-            ff.close()
-        
+            try :
+                cascade_path = repo_path + '/haarcascade_frontalface_default.xml'
+                face_cascade = cv2.CascadeClassifier(cascade_path)
+            except :
+                import requests
+                requests.get('https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml')
+                ff = open('haarcascade_frontalface_default.xml','w')
+                ff.write(str(r.content.decode("utf-8")))
+                ff.close()
+                face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
         faces = face_cascade.detectMultiScale(gray, 1.3, 5) 
 
         try :
@@ -139,8 +146,9 @@ def put_caption(caption,input_file='',output_file='', caption_width=50, xy = (''
 
     image = Image.open(input_file)
     draw = ImageDraw.Draw(image)
-
+    cap_len = len(caption_new.split('\n'))
     font = ImageFont.truetype(text_font, size=font_size)
+    
     if (xy[0] == '' or xy[1] == ''):
         w,h = draw.textsize(caption_new, font=font)
         W,H = image.size
@@ -153,10 +161,11 @@ def put_caption(caption,input_file='',output_file='', caption_width=50, xy = (''
     image.save(output_file)
     return(output_file)
 
-def put_logo( input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)',
-            border = ('','')):
+def put_logo( input_file='',output_file='', xy = ('',''), text_font = '', font_size='',font_color='rgba(255,255,255,255)',
+            border = ('',''),twitter_text='Awakened_Ind',facebook_url='awakenedindian.in'):
     repo_path = get_path()
-
+    if text_font == '':
+        text_font = repo_path + '/fonts/ChunkFive-Regular.otf'
     if input_file == '':
         try :
             input_file = sorted(glob.glob('imaged-with-border*'))[-1]
@@ -194,7 +203,7 @@ def put_logo( input_file='',output_file='', xy = ('',''), text_font = './fonts/C
     bg_w, bg_h = background.size
     ht = background.size[1] - tw_img.size[1]
 
-    logo = 'awakenedindian.in'
+    logo = facebook_handle
     font = ImageFont.truetype(text_font, size=font_size)
     tw_text_size,h = draw.textsize(logo, font=font)
 
@@ -207,7 +216,7 @@ def put_logo( input_file='',output_file='', xy = ('',''), text_font = './fonts/C
     draw.text((x,y),logo,font=font)
 
     #
-    logo = 'Awakened_Ind'
+    logo = twitter_handle
     font = ImageFont.truetype(text_font, size=font_size)
     tw_text_size,h = draw.textsize(logo, font=font)
     x,y = border[0] + img_w,  ht-border[1]
@@ -232,5 +241,6 @@ def sqcut(input_file, output_file=''):
         output_file = 'out' + input_file
     img_cut.save(output_file)
     return (output_file)
+
 
 

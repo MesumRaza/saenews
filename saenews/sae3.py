@@ -162,7 +162,7 @@ def put_caption(caption,input_file='',output_file='', caption_width=50, xy = (''
     return(output_file)
 
 def put_logo( input_file='',output_file='', xy = ('',''), text_font = '', font_size='',font_color='rgba(255,255,255,255)',
-            border = ('',''),twitter_text='Awakened_Ind',facebook_url='awakenedindian.in'):
+            border = ('',''),twitter_handle='Awakened_Ind',facebook_handle='awakenedindian.in'):
     repo_path = get_path()
     if text_font == '':
         text_font = repo_path + '/fonts/ChunkFive-Regular.otf'

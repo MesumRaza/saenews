@@ -3,8 +3,13 @@ import os
 import glob
 pkglist = glob.glob('saenews/*')
 #from setuptools import setup, find_packages
+from os import path
+this_directory = path.abspath(path.dirname('__file__'))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
-  package_data      = {'saenews': ['fonts/*','fonts/TTF/*','fonts/OTF/*','SM/*'] },
+  package_data      = {'saenews': ['*','fonts/*','fonts/TTF/*','fonts/OTF/*','SM/*'] },
   zip_safe=False,
   include_package_data = True,
   name = 'saenews',        
