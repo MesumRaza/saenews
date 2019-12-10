@@ -19,7 +19,8 @@ pip install saenews==0.3.9
 
 ### Downloading utilities
 
-*No need to download from version 1.1.0 - utilites come with the repository itself*
+#### Update : No need to download from version 1.1.0 - utilites come with the repository itself
+
 The code will assume the fonts are available in the `./fonts/` directory. You can change it by passing `text_font` argument in everyfunction
 
 Download the utilities like fonts and social media icons from https://github.com/dheerajmpai/saenews/raw/master/utils.zip
