@@ -161,18 +161,11 @@ def put_caption(caption,input_file='',output_file='', caption_width=50, xy = (''
     image.save(output_file)
     return(output_file)
 
-<<<<<<< HEAD
 def put_logo( input_file='',output_file='', xy = ('',''), text_font = '', font_size='',font_color='rgba(255,255,255,255)',
             border = ('',''),twitter_text='Awakened_Ind',facebook_url='awakenedindian.in'):
     repo_path = get_path()
     if text_font == '':
         text_font = repo_path + '/fonts/ChunkFive-Regular.otf'
-=======
-def put_logo( input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)',
-            border = ('','')):
-    repo_path = get_path()
-
->>>>>>> 580d8c080bcc85a5a40cdb7283bf4e6a57d1d86e
     if input_file == '':
         try :
             input_file = sorted(glob.glob('imaged-with-border*'))[-1]
