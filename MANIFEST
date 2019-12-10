@@ -2,6 +2,7 @@
 setup.cfg
 setup.py
 saenews/README.md
+saenews/Untitled.ipynb
 saenews/__init__.py
 saenews/haarcascade_frontalface_default.xml
 saenews/insta.py
