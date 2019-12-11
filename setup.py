@@ -1,4 +1,5 @@
-from distutils.core import setup
+from setuptools import setup
+#from distutils.core import setup
 import os
 import glob
 pkglist = glob.glob('saenews/*')
@@ -14,8 +15,11 @@ setup(
   include_package_data = True,
   name = 'saenews',        
   packages = ['saenews'],  
-  version = '1.1.0',       
+  version = '1.1.1',       
   license='MIT',        
+    # other arguments omitted
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   description = 'required code for sae.news',   
   author = 'saenews',        
   author_email = 'contact@advaitlabs.com',      # Type in your E-Mail
