@@ -100,8 +100,8 @@ class sae2():
         return (output_file)
 
     def put_caption(self,caption,input_file='',output_file='', caption_width=50, xy = ('',''), text_font = './fonts/PTS75F.ttf', font_size=50,font_color='rgba(255,255,255,255)',):
-        repo_path = get_path()
-        text_font =  repo_path + '/fonts/PTS75F.ttf'
+        repo_pathget_path()
+        text_font =  '/fonts/PTS75F.ttf'
         if input_file == '':
             try :
                 input_file = sorted(glob.glob('vignet_out*'))[-1]
