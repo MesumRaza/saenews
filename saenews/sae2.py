@@ -160,6 +160,8 @@ class sae2():
 
     def put_logo(self, input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)',
                 border = ('','')):
+        repo_path = get_path()        
+        text_font = repo_path + '/fonts/ChunkFive-Regular.otf'
         if input_file == '':
             try :
                 input_file = sorted(glob.glob('imaged-with-border*'))[-1]
