@@ -8,6 +8,7 @@ saenews/__init__.py
 saenews/haarcascade_frontalface_default.xml
 saenews/insta.py
 saenews/sae2.py
+saenews/sae2.py~
 saenews/sae3.py
 saenews/sae3.py~
 saenews/saenews.py
