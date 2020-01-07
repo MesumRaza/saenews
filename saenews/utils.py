@@ -56,6 +56,8 @@ def poster(title,tag_line,input_file, output_file=''):
 
 
 def title_tagline_news(title,tag_line,input_file, output_file=''):
+    repo_path = get_path()
+
     if output_file == '':
         output_file = str(datetime.datetime.now()) + '.png'
     a = sae2() # Do not Remove # Class Initiation
