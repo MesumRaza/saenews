@@ -15,7 +15,7 @@ setup(
   include_package_data = True,
   name = 'saenews',        
   packages = ['saenews'],  
-  version = '1.1.2',       
+  version = '1.1.3',       
   license='MIT',        
     # other arguments omitted
   long_description=long_description,
