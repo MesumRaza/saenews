@@ -8,6 +8,12 @@ import glob
 import datetime
 import requests
 
+def get_path():
+    import saenews.utils as utils
+    d = os.path.dirname(os.path.abspath(utils.__file__))
+
+    return(d)
+
 
 class sae2():
 
@@ -170,7 +176,8 @@ class sae2():
     #     background = Image.fromarray(add_alpha(np.array(background)))
         draw = ImageDraw.Draw(background)
     #     from PIL import Image
-        tw_img = Image.open('SM/tw.png')
+        repo_path = get_path()
+        tw_img = Image.open(repo_path + '/SM/tw.png')
 
         tw_img = tw_img.resize((font_size,font_size))
         img_w, img_h = tw_img.size
@@ -181,7 +188,7 @@ class sae2():
         background.paste(tw_img, offset,tw_img)
 
         # Adding FB Logo
-        tw_img = Image.open('./SM/fb.png')
+        tw_img = Image.open(repo_path + '/SM/fb.png')
 
         tw_img = tw_img.resize((font_size,font_size))
         img_w, img_h = tw_img.size
