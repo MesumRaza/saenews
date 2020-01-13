@@ -100,7 +100,7 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)
     
-def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='', logo_border='', border_color='red', text_font = '', cap_text_font = '', cap_width=0.055):
+def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='', logo_border='', border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=''):
 
     repo_path = get_path()
 
@@ -141,7 +141,8 @@ def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_
     if font_size == '':
         font_size = W//36 # Font Size Enter Manually if required
     # xy_tagline = (xy[0], xy[1]+ font_size+10)
-    xy_tagline = (xy[0], xy[1]+h*2)
+    if cap_cord == '':
+        xy_tagline = (xy[0], xy[1]+h*2)
     
     caption_width = round(W*cap_width)
     out = a.put_caption(input_file=out, caption=tag_line,caption_width=caption_width,font_size=font_size, xy = xy_tagline, text_font=cap_text_font)
