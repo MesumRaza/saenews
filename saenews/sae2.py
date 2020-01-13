@@ -16,6 +16,7 @@ def get_path():
 
 
 class sae2():
+    repo_path = get_path()
 
     input_file = ''
 #     def input_file(self,inp):
