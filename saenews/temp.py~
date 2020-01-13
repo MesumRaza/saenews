@@ -33,5 +33,5 @@ def put_quote(border_dim=0.2,*args, **kwargs):
 title = "Arise, Awake, stop not till the goal is reached."
 tag_line = "(Kathopanishad)"
 input_file_orig = "SV.jpg"
-put_quote(border_dim=0.3,title=title,tag_line=tag_line,input_file_orig=input_file_orig, cord = (0.03,0.766), border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=(0.7,0.866), border_width=0)
+put_quote(border_dim=0.2,title=title,tag_line=tag_line,input_file_orig=input_file_orig, cord = (0.03,0.766), border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=(0.7,0.866), border_width=0)
 
