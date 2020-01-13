@@ -24,7 +24,6 @@ def put_quote(border_dim=0.2,border_dims=(0,0,0,0), *args, **kwargs):
 
 from PIL import Image, ImageFont, ImageDraw
 import cv2
-from saenews.sae2 import sae2
 import datetime
 from saenews.sae3 import *
 import os
@@ -36,5 +35,5 @@ tag_line = "(Kathopanishad)"
 input_file_orig = "SV.jpg"
 in_img = input_file_orig
 
-put_quote(border_dim=0.2,border_dims= (0, 0, 0,0.15), title=title,tag_line='',input_file_orig=input_file_orig, cord = (0.1,0.886), border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=(0.7,0.866),focus='false')
+put_quote(input_file_orig=input_file_orig,border_dim=0.2,border_dims= (0, 0, 0,0.15), title=title,tag_line='', cord = (0.1,0.886), border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=(0.7,0.866),focus='false')
 

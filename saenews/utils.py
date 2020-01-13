@@ -167,7 +167,7 @@ def add_border(input_image, output_image, border, border_color='black'):
     bimg.save(output_image)
     print (output_image)
 
-def put_quote(border_dim=0.2,border_dims=(0,0,0,0), *args, **kwargs):
+def put_quote(input_file_orig,border_dim=0.2,border_dims=(0,0,0,0), *args, **kwargs):
     bottom_factor = border_dim
     in_img = input_file_orig
     img = Image.open(in_img)
