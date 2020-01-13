@@ -14,7 +14,7 @@ pip install saenews
 or install a specific version
 
 ```bash
-pip install saenews==0.3.9
+pip install saenews==1.1.7
 ```
 
 ### Downloading utilities
