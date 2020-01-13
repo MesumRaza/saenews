@@ -25,6 +25,8 @@ saenews/sae3.py~
 saenews/saenews.py.save
 saenews/temp.py
 saenews/temp.py~
+saenews/templates.py
+saenews/templates.py~
 saenews/utils.py
 saenews/utils.py~
 saenews/vignet_out.png
