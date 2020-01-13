@@ -100,9 +100,10 @@ class sae2():
         cv2.imwrite(output_file,zeros)
         return (output_file)
 
-    def put_caption(self,caption,input_file='',output_file='', caption_width=50, xy = ('',''), text_font = './fonts/PTS75F.ttf', font_size=50,font_color='rgba(255,255,255,255)',):
+    def put_caption(self,caption,input_file='',output_file='', caption_width=50, xy = ('',''), text_font = '', font_size=50,font_color='rgba(255,255,255,255)',):
         repo_path = get_path()
-        text_font =  repo_path + '/fonts/PTS75F.ttf'
+        if text_font == '':
+            text_font =  repo_path + '/fonts/PTS75F.ttf'
         if input_file == '':
             try :
                 input_file = sorted(glob.glob('vignet_out*'))[-1]
