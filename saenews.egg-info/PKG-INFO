@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: saenews
-Version: 1.1.8
+Version: 1.1.9
 Summary: required code for sae.news
 Home-page: https://github.com/dheerajmpai/saenews/
 Author: saenews
@@ -23,7 +23,7 @@ Description: [![Downloads](https://pepy.tech/badge/saenews)](https://pepy.tech/p
         or install a specific version
         
         ```bash
-        pip install saenews==0.3.9
+        pip install saenews==1.1.7
         ```
         
         ### Downloading utilities

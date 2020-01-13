@@ -2,8 +2,13 @@ MANIFEST.in
 README.md
 setup.cfg
 setup.py
-saenews/2020-01-13 22:50:18.475836.png
+saenews/2020-01-13 23:04:49.219426.png
+saenews/2020-01-13 23:05:16.875689.png
+saenews/2020-01-13 23:05:41.532357.png
+saenews/2020-01-13 23:06:08.795133.png
+saenews/2020-01-13 23:06:18.201704.png
 saenews/README.md
+saenews/SV.jpg
 saenews/Untitled.ipynb
 saenews/__init__.py
 saenews/_imaged-with-border_captionedcaptionedvignet_out.png
