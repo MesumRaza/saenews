@@ -100,7 +100,8 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)
     
-def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='' , logo_border='', border_color='red', text_font = '', cap_text_font = '', font_size=='', cap_width=0.055):
+def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='' , logo_border='', border_color='red', text_font = '', cap_text_font = '', cap_width=0.055):
+
     repo_path = get_path()
 
     if output_file == '':
