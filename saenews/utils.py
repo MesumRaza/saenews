@@ -100,7 +100,7 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)
     
-def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='', logo_border='', border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=''):
+def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='', logo_border='', border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord='', *args, **kwargs):
 
     repo_path = get_path()
 
@@ -153,13 +153,20 @@ def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_
     return(out)    
     
 def add_border(input_image, output_image, border, border_color='black'):
-    img = Image.open(input_image)
- 
+    img = Image.open(input_image) 
     if isinstance(border, int) or isinstance(border, tuple):
         bimg = ImageOps.expand(img, border=border, fill=border_color)
     else:
         raise RuntimeError('Border is not an integer or tuple!')
- 
     bimg.save(output_image)
     print (output_image)
-    
+
+def put_quote(border_dim=0.2,*args, **kwargs):
+    bottom_factor = border_dim
+    in_img = input_file
+    img = Image.open(in_img)
+    W,H = img.size
+    add_border(in_img,
+               output_image='bordered.jpg',
+               border=(0, 0, 0,round(W*bottom_factor)))
+    quote(input_file='bordered.jpg', *args,**kwargs)
