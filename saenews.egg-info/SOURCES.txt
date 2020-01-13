@@ -2,7 +2,7 @@ MANIFEST.in
 README.md
 setup.cfg
 setup.py
-saenews/2020-01-13 20:47:07.401837.png
+saenews/2020-01-13 22:50:18.475836.png
 saenews/README.md
 saenews/Untitled.ipynb
 saenews/__init__.py
