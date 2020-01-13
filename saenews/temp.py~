@@ -36,5 +36,5 @@ tag_line = "(Kathopanishad)"
 input_file_orig = "12.jpg"
 in_img = input_file_orig
 
-put_quote(border_dim=0.2,border_dims= (0, 0, 0,0.7), title=title,tag_line='',input_file_orig=input_file_orig, cord = (0.1,0.886), border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=(0.7,0.866), border_width=0)
+put_quote(border_dim=0.2,border_dims= (0, 0, 0,0.7), title=title,tag_line='',input_file_orig=input_file_orig, cord = (0.1,0.886), border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=(0.7,0.866), border_width=0,focus='false')
 

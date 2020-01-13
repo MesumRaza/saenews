@@ -4,3 +4,4 @@ include saenews/fonts/*
 include saenews/fonts/OTF/*
 include saenews/fonts/TTF/*
 include saenews/SM/*
+include saenews/*.xml

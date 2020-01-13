@@ -6,8 +6,8 @@ import textwrap
 import cv2
 import glob
 import datetime
-import requests
 import os
+import requests
 def get_path():
     import saenews.utils as utils
     d = os.path.dirname(os.path.abspath(utils.__file__))
@@ -42,6 +42,7 @@ class sae2():
         return (output_file)
 
     def get_vignet_face(self, input_arg, output_file = '',fxy=('','')):
+        repo_path = get_path()
         if  (type(input_arg) == str):
             img = cv2.imread(input_arg,1)
         elif (type(input_arg) == np.ndarray):
@@ -56,10 +57,10 @@ class sae2():
             # Finding the Face 
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) 
             try :
-                face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') 
+                face_cascade = cv2.CascadeClassifier(repo_path + '/haarcascade_frontalface_default.xml') 
             except :
                 requests.get('https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml')
-                ff = open('haarcascade_frontalface_default.xml','w')
+                ff = open(repo_path + 'haarcascade_frontalface_default.xml','w')
                 ff.write(str(r.content.decode("utf-8")))
                 ff.close()
             
