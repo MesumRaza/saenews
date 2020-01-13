@@ -144,7 +144,7 @@ def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_
     if cap_cord == '':
         xy_tagline = (xy[0], xy[1]+h*2)
     else :
-        xy_tagline = cap_cord[0]*W, cap_cord[]*H
+        xy_tagline = cap_cord[0]*W, cap_cord[1]*H
     caption_width = round(W*cap_width)
     out = a.put_caption(input_file=out, caption=tag_line,caption_width=caption_width,font_size=font_size, xy = xy_tagline, text_font=cap_text_font)
     out = a.add_border(width=border_width,color=border_color,input_file=out,  )
@@ -152,4 +152,14 @@ def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)    
     
-
+def add_border(input_image, output_image, border, border_color='black'):
+    img = Image.open(input_image)
+ 
+    if isinstance(border, int) or isinstance(border, tuple):
+        bimg = ImageOps.expand(img, border=border, fill=border_color)
+    else:
+        raise RuntimeError('Border is not an integer or tuple!')
+ 
+    bimg.save(output_image)
+    print (output_image)
+    

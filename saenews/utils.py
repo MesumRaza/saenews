@@ -152,4 +152,14 @@ def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)    
     
-
+def add_border(input_image, output_image, border, border_color='black'):
+    img = Image.open(input_image)
+ 
+    if isinstance(border, int) or isinstance(border, tuple):
+        bimg = ImageOps.expand(img, border=border, fill=border_color)
+    else:
+        raise RuntimeError('Border is not an integer or tuple!')
+ 
+    bimg.save(output_image)
+    print (output_image)
+    
