@@ -149,3 +149,5 @@ def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_
 
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)    
+    
+
