@@ -2,18 +2,25 @@ MANIFEST.in
 README.md
 setup.cfg
 setup.py
+saenews/2020-01-13 20:47:07.401837.png
 saenews/README.md
 saenews/Untitled.ipynb
 saenews/__init__.py
+saenews/_imaged-with-border_captionedcaptionedvignet_out.png
+saenews/_resize.png
+saenews/bobo.jpg
+saenews/captionedcaptionedvignet_out.png
+saenews/captionedvignet_out.png
 saenews/haarcascade_frontalface_default.xml
 saenews/insta.py
 saenews/sae2.py
 saenews/sae2.py~
 saenews/sae3.py
 saenews/sae3.py~
-saenews/saenews.py
+saenews/saenews.py.save
 saenews/utils.py
 saenews/utils.py~
+saenews/vignet_out.png
 saenews.egg-info/PKG-INFO
 saenews.egg-info/SOURCES.txt
 saenews.egg-info/dependency_links.txt
