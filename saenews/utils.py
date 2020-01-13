@@ -100,7 +100,7 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)
     
-def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='', logo_border='', border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord='', *args, **kwargs):
+def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_size='', caption_width='', border_width='', logo_border='', border_color='red', text_font = '', cap_text_font = '', cap_width=0.055, cap_cord='', focus='', *args, **kwargs):
 
     repo_path = get_path()
 
@@ -133,9 +133,15 @@ def quote(title,tag_line,input_file, output_file='', cord = (0.035,0.666), font_
     draw = ImageDraw.Draw(img)
     w,h = draw.textsize(title, font=font_title)
     ### Do not edit below unless you know the exact working of the functions
+    if focus == 'centre':
+        out = a.get_vignet_face('_resize.png',fxy='centre' )
+    elif focus == 'false':
+        out = '_resize.png'
+    else:
+        out = a.get_vignet_face('_resize.png' )
+    # If you do not want to put focus
 
-    out = a.get_vignet_face('_resize.png',fxy='centre' )
-    out = a.put_caption(input_file=out, caption=title,caption_width=caption_width,font_size=font_size, xy = xy, text_font=text_font)
+    out = a.put_caption(input_file=out, caption=title,caption_width=caption_width,font_size=font_size, xy = xy, text_font=text_font)        
     if cap_text_font == '':
         cap_text_font = repo_path + '/fonts/PTS56F.ttf'
     if font_size == '':
@@ -163,10 +169,10 @@ def add_border(input_image, output_image, border, border_color='black'):
 
 def put_quote(border_dim=0.2,*args, **kwargs):
     bottom_factor = border_dim
-    in_img = input_file
+    in_img = input_file_orig
     img = Image.open(in_img)
     W,H = img.size
     add_border(in_img,
                output_image='bordered.jpg',
-               border=(0, 0, 0,round(W*bottom_factor)))
+               border=(round(W*bottom_factor), 0, 0,round(W*bottom_factor)))
     quote(input_file='bordered.jpg', *args,**kwargs)
