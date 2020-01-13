@@ -231,6 +231,8 @@ class sae2():
     #     image.save('captioned' + input_file)
     #     print('captioned' + input_file)
     #     return(image)
+    
+    
 class saeinsta(sae2):
     def sqcut(self,input_file, output_file=''):
         img = Image.open(input_file)
