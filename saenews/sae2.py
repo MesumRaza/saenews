@@ -163,6 +163,7 @@ class sae2():
                 border = ('','')):
         repo_path = get_path()        
         text_font = repo_path + '/fonts/ChunkFive-Regular.otf'
+        print (text_font)
         if input_file == '':
             try :
                 input_file = sorted(glob.glob('imaged-with-border*'))[-1]
@@ -215,6 +216,7 @@ class sae2():
 
         #
         logo = 'Awakened_Ind'
+
         font = ImageFont.truetype(text_font, size=font_size)
         tw_text_size,h = draw.textsize(logo, font=font)
         x,y = border[0] + img_w,  ht-border[1]
