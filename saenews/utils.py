@@ -153,7 +153,7 @@ def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666),
     else :
         xy_tagline = tag_cord[0]*W, tag_cord[1]*H
     tag_width = round(W*tag_width_ratio)
-    out = a.put_caption(input_file=out, caption=tag_line,caption_width=tag_width,font_size=tag_font_size, xy = xy_tagline, text_font=cap_text_font)
+    out = a.put_caption(input_file=out, caption=tag_line,caption_width=tag_width,font_size=tag_font_size, xy = xy_tagline, text_font=tag_text_font)
     out = a.add_border(width=border_width,color=border_color,input_file=out,  )
 
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
