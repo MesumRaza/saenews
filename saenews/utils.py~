@@ -101,7 +101,7 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     return(out)
     
     
-def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666), title_font_size='', tag_font_size='', title_width_ratio='', border_width='', logo_border='', border_color='red', title_text_font = '', tag_text_font = '', tag_width_ratio=0.055, tag_cord='', focus='', *args, **kwargs):
+def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666), title_font_size='', tag_font_size='', title_width_ratio='', border_width='', logo_border='', border_color='red', title_text_font = '', tag_text_font = '', tag_width_ratio='', tag_cord='', focus='', *args, **kwargs):
 
     repo_path = get_path()
     if output_file == '':
@@ -152,9 +152,11 @@ def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666),
         xy_tagline = (xy[0], xy[1]+h*2)
     else :
         xy_tagline = tag_cord[0]*W, tag_cord[1]*H
-    tag_width = round(W*tag_width_ratio)
-    out = a.put_caption(input_file=out, caption=tag_line,caption_width=tag_width,font_size=tag_font_size, xy = xy_tagline, text_font=tag_text_font)
-    out = a.add_border(width=border_width,color=border_color,input_file=out,  )
+    if tag_width_ratio == '':
+        tag_width_ratio = 1    
+    tag_width = round(W*0.055*tag_width_ratio)
+    out = a.put_caption(input_file=out, caption=tag_line, caption_width=tag_width,font_size=tag_font_size, xy = xy_tagline, text_font=tag_text_font)
+    out = a.add_border(width=border_width,color=border_color,input_file=out)
 
     out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
     return(out)    
