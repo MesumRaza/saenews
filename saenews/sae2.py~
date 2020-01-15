@@ -216,7 +216,7 @@ class sae2():
         x,y = bg_w - border[0] - tw_text_size,  ht-border[1]
         draw.text((x,y),fb_logo,font=font)
 
-        #
+        #awakened
         
 
         font = ImageFont.truetype(text_font, size=font_size)
