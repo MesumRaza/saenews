@@ -232,7 +232,7 @@ class sae4():
     #     return(image)
     
     
-class saeinsta(sae2):
+class saeinsta(sae4):
     def sqcut(self,input_file, output_file=''):
         img = Image.open(input_file)
         if W<H:
