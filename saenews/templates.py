@@ -3,14 +3,9 @@
 from saenews.utils import quote, put_quote
 
 
-title = "Arise, Awake, stop not till the goal is reached."
-tag_line = "(Kathopanishad)"
-input_file_orig = "12.jpg"
+title = "Kashmir Mein Rehna Hoga to Allah ho Akbar Kehna Hoga"
+tag_line = "If you wan't to live in Kashmir you need to pray 'Allah ho Akbar'"
+input_file_orig = "last.png"
 
-
-put_quote(input_file_orig=input_file_ orig,
-border_dim=0.2,border_dims= (0, 0, 0,0.15), border_color='red',
-title=title,tag_line='', 
-cord = (0.1,0.886), text_font = '', cap_text_font = '', cap_width=0.055, cap_cord=(0.7,0.866),
-focus='false')
+put_quote(title=title, tag_line=tag_line, black_strip_dims=(0, 0, 0, 3), input_file_orig=input_file_orig, output_file='', title_cord=(0.035, 0.166), title_font_size=90, tag_font_size=50, title_width_ratio=0.5, border_width='', logo_border='', border_color='red', title_text_font='ArabDances.ttf', tag_text_font='fonts/PTS75F.ttf', tag_width_ratio=0.44, tag_cord=(0.035, 0.766), focus='false')
 

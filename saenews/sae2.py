@@ -161,7 +161,7 @@ class sae2():
         image.save(output_file)
         return(output_file)
 
-    def put_logo(self, input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)',
+    def put_logo(self, input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)', fb_logo = 'awakenedindian.in' , tw_logo = 'Awakened_Ind', insta_logo = 'awakenedindian.in'
                 border = ('','')):
         repo_path = get_path()        
         text_font = repo_path + '/fonts/ChunkFive-Regular.otf'
@@ -204,9 +204,9 @@ class sae2():
         bg_w, bg_h = background.size
         ht = background.size[1] - tw_img.size[1]
 
-        logo = 'awakenedindian.in'
+        
         font = ImageFont.truetype(text_font, size=font_size)
-        tw_text_size,h = draw.textsize(logo, font=font)
+        tw_text_size,h = draw.textsize(fb_logo, font=font)
 
 
         offset = (bg_w - border[0] - tw_text_size -tw_img.size[0] , ht-border[1])
@@ -214,15 +214,15 @@ class sae2():
 
         # Adding Text for FB
         x,y = bg_w - border[0] - tw_text_size,  ht-border[1]
-        draw.text((x,y),logo,font=font)
+        draw.text((x,y),fb_logo,font=font)
 
         #
-        logo = 'Awakened_Ind'
+        
 
         font = ImageFont.truetype(text_font, size=font_size)
-        tw_text_size,h = draw.textsize(logo, font=font)
+        tw_text_size,h = draw.textsize(tw_logo, font=font)
         x,y = border[0] + img_w,  ht-border[1]
-        draw.text((x,y),logo,font=font)
+        draw.text((x,y),tw_logo,font=font)
         if output_file == '':
             output_file = 'final_'+input_file
         background.save(output_file)
