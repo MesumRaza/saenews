@@ -5,6 +5,7 @@ setup.py
 saenews/README.md
 saenews/Untitled.ipynb
 saenews/__init__.py
+saenews/dcsdcsdcdscsdc
 saenews/haarcascade_frontalface_default.xml
 saenews/insta.py
 saenews/new.py
@@ -14,6 +15,10 @@ saenews/sae2.py~
 saenews/sae3.py
 saenews/sae3.py~
 saenews/saenews.py.save
+saenews/saeutils.py
+saenews/saeutils.py~
+saenews/sutils.py
+saenews/sutils.py~
 saenews/temp.py
 saenews/temp.py~
 saenews/templates.py
