@@ -5,7 +5,7 @@ import datetime
 from saenews.sae3 import *
 import os
 
-def get_path():
+def get_path(): 
     import saenews.utils as utils
     d = os.path.dirname(os.path.abspath(utils.__file__))
     
