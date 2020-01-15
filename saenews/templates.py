@@ -1,6 +1,6 @@
 #from PIL import Image, ImageFont, ImageDraw
 #from saenews.sae3 import *
-from saenews.utils import quote, put_quote
+from saenews.sutils import quote, put_quote
 
 
 title = "Kashmir Mein Rehna Hoga to Allah ho Akbar Kehna Hoga"
