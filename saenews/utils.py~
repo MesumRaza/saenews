@@ -101,7 +101,7 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     return(out)
     
     
-def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666), title_font_size='', tag_font_size='', title_width_ratio='', border_width='', logo_border='', border_color='red', title_text_font = '', tag_text_font = '', tag_width_ratio='', tag_cord='', focus='',fb_logo = 'awakenedindian.in' , tw_logo = 'Awakened_Ind', *args, **kwargs):
+def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666), title_font_size='', tag_font_size='', title_width_ratio='', border_width='', logo_border='', border_color='red', title_text_font = '', tag_text_font = '', tag_width_ratio='', tag_cord='', focus='',fb_logo = 'awakenedindian.in' , tw_logo = 'Awakened_Ind', logo = True ,*args, **kwargs):
 
     repo_path = get_path()
     if output_file == '':
@@ -157,8 +157,8 @@ def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666),
     tag_width = round(W*0.055*tag_width_ratio)
     out = a.put_caption(input_file=out, caption=tag_line, caption_width=tag_width,font_size=tag_font_size, xy = xy_tagline, text_font=tag_text_font)
     out = a.add_border(width=border_width,color=border_color,input_file=out)
-
-    out = a.put_logo(input_file=out,border=logo_border, output_file=output_file)
+    if logo == True:
+        out = a.put_logo(input_file=out,border=logo_border, output_file=output_file, fb_logo=fb_logo, tw_logo=tw_logo)
     return(out)    
     
 def add_border(input_image, output_image, border, border_color='black'):
