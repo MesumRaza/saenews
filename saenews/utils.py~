@@ -156,9 +156,11 @@ def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666),
         tag_width_ratio = 1    
     tag_width = round(W*0.055*tag_width_ratio)
     out = a.put_caption(input_file=out, caption=tag_line, caption_width=tag_width,font_size=tag_font_size, xy = xy_tagline, text_font=tag_text_font)
-    out = a.add_border(width=border_width,color=border_color,input_file=out)
     if logo == True:
-        out = a.put_logo(input_file=out,border=logo_border, output_file=output_file, fb_logo=fb_logo, tw_logo=tw_logo)
+        out = a.add_border(width=border_width,output_file,color=border_color,input_file=out)
+        out = a.put_logo(input_file=out,border=logo_border, output_file=output_file, fb_logo=fb_logo, tw_logo=tw_logo, logo=logo)
+    else :
+        out = a.add_border(width=border_width,output_file=output_file,color=border_color,input_file=out)
     return(out)    
     
 def add_border(input_image, output_image, border, border_color='black'):

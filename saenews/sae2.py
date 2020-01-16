@@ -161,7 +161,7 @@ class sae2():
         image.save(output_file)
         return(output_file)
 
-    def put_logo(self, input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)', fb_logo = 'awakenedindian.in' , tw_logo = 'Awakened_Ind', insta_logo = 'awakenedindian.in', 
+    def put_logo(self, input_file='',output_file='', xy = ('',''), text_font = './fonts/ChunkFive-Regular.otf', font_size='',font_color='rgba(255,255,255,255)', fb_logo = 'awakenedindian.in' , tw_logo = 'Awakened_Ind', insta_logo = 'awakenedindian.in', logo = True,
                 border = ('','')):
         repo_path = get_path()        
         text_font = repo_path + '/fonts/ChunkFive-Regular.otf'
@@ -223,6 +223,7 @@ class sae2():
         tw_text_size,h = draw.textsize(tw_logo, font=font)
         x,y = border[0] + img_w,  ht-border[1]
         draw.text((x,y),tw_logo,font=font)
+        
         if output_file == '':
             output_file = 'final_'+input_file
         background.save(output_file)
