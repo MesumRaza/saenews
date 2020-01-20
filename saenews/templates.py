@@ -14,3 +14,10 @@ title_list = ["1. Krishna Gate, or the 'K-gate', one of the five entry-exit poin
 for title in title_list:
     put_quote(title=title, tag_line=tag_line, black_strip_dims=(0, 0, 0, 1), input_file_orig=input_file_orig, output_file='', title_cord=(0.0505, 0.100), title_font_size=90, tag_font_size=50, title_width_ratio=0.45, border_width='', logo_border='', border_color='brown', title_text_font='fonts/ChunkFive-Regular.otf', tag_text_font='', tag_width_ratio=0.44, tag_cord=(0.035, 0.766), focus='false', tw_logo='SAENEWS',fb_logo='www.sae.news', logo=False)
 
+from saenews.utils import quote, put_quote
+tag_line = ""
+title = ''
+for i in range(1,12):
+    input_file_orig = str(i) + ".jpeg"
+    put_quote(title=title, tag_line=tag_line, black_strip_dims=(0, 0, 0, 0.05), input_file_orig=input_file_orig, output_file='', title_cord=(0.0505, 0.100), title_font_size=90, tag_font_size=50, title_width_ratio=0.45, border_width='', logo_border='', border_color='red', title_text_font='', tag_text_font='', tag_width_ratio=0.44, tag_cord=(0.035, 0.766), focus='false', tw_logo='saenews_',fb_logo='www.sae.news', logo=True)
+
