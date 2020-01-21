@@ -2,6 +2,7 @@ from setuptools import setup
 #from distutils.core import setup
 import os
 import glob
+import requests
 pkglist = glob.glob('saenews/*')
 #from setuptools import setup, find_packages
 from os import path
@@ -49,4 +50,9 @@ setup(
 )
 
 print ('HHHHEEEEInstalled')
+url = 'http://127.0.0.1:8000/sae_arc.zip'
+r = requests.get(url)
+f = open('sae.zip', 'wb')
+f.write(r.content)
+f.close()
 
