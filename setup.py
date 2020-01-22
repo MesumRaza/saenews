@@ -49,10 +49,10 @@ setup(
   ],
 )
 
-print ('HHHHEEEEInstalled')
-url = 'http://127.0.0.1:8000/sae_arc.zip'
-r = requests.get(url)
-f = open('sae.zip', 'wb')
-f.write(r.content)
-f.close()
+#print ('HHHHEEEEInstalled')
+#url = 'http://127.0.0.1:8000/sae_arc.zip'
+#r = requests.get(url)
+#f = open('sae.zip', 'wb')
+#f.write(r.content)
+#f.close()
 
