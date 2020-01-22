@@ -7,7 +7,6 @@ import os
 import saenews.sae3 as utils
 
 def get_path():
-    import saenews.sae3 as utils
     d = os.path.dirname(os.path.abspath(utils.__file__))
     
     return(d)
