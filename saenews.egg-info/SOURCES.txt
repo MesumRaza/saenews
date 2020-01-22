@@ -24,6 +24,7 @@ saenews/temp.py
 saenews/temp.py~
 saenews/templates.py
 saenews/templates.py~
+saenews/updater.py
 saenews/utils.py
 saenews/utils.py~
 saenews.egg-info/PKG-INFO
