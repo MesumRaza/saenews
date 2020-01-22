@@ -9,7 +9,7 @@ import datetime
 import os
 import requests
 def get_path():
-    import saenews.utils as utils
+    import saenews.sae2 as utils
     d = os.path.dirname(os.path.abspath(utils.__file__))
 
     return(d)
