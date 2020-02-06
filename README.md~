@@ -85,6 +85,8 @@ For namesake I am considering the image name to be `image.jpg`. But change it ac
 from saenews.utils import quote, put_quote
 put_quote('image.jpg')
 ```
+
+![Image]('./ex/2020-02-06 16:06:25.898632.png')
 The final image would be saved in the directory in the format <Current Date and time>.png . It will also be displayed on the terminal. There will be a lot of other intermediate images for references which you can delete.
 
 The current version the default handles are of Awakened Indian. If you need to change them you need to pass additional arguments. Following is an example where I am using the code for sae.news. 
@@ -161,10 +163,9 @@ The title and tagline takes few arguments.
 ## Example :
 
 ```python
-
 from saenews.utils import quote, put_quote
 title = "Be the change you want to see!"
-quote(input_file='image.jpg', title=title, title_cord=(0.035, 0.666), title_font_size=80,  title_width_ratio=0.9)
+put_quote(input_file='image.jpg', title=title, title_cord=(0.035, 0.666), title_font_size=80,  title_width_ratio=0.9)
 ```
 
 ## Adding Tagline. 
