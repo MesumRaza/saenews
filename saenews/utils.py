@@ -1,3 +1,4 @@
+
 from PIL import Image, ImageFont, ImageDraw
 import cv2
 from saenews.sae2 import sae2
@@ -15,6 +16,7 @@ def get_path():
 
 def poster(input_file,title='',tag_line='', output_file=''):
     repo_path = get_path()
+
     if output_file == '':
         output_file = str(datetime.datetime.now()) + '.png'
     # Do not Remove # Class Initiation
@@ -108,7 +110,10 @@ def quote(input_file='',title='',tag_line='', output_file='', title_cord = (0.03
         
     repo_path = get_path()
     if output_file == '':
-        output_file = str(datetime.datetime.now()) + '.png'
+        output_file = str(datetime.datetime.now()).replace('.','_')
+        output_file = output_file.replace(':','_')
+        output_file = output_file.replace(' ','_')
+        output_file = output_file + '.png'
     a = sae2() # Do not Remove # Class Initiation
     a.input_file = input_file # Name of Input  File
     file_name = input_file.split('.')[0]
