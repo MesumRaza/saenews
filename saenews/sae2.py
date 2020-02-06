@@ -8,10 +8,10 @@ import glob
 import datetime
 import os
 import requests
+
 def get_path():
     import saenews.serv as utils
     d = os.path.dirname(os.path.abspath(utils.__file__))
-
     return(d)
 
 

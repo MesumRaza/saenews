@@ -13,7 +13,7 @@ def get_path():
 
 
 
-def poster(title,tag_line,input_file, output_file=''):
+def poster(input_file,title='',tag_line='', output_file=''):
     repo_path = get_path()
     if output_file == '':
         output_file = str(datetime.datetime.now()) + '.png'
@@ -57,7 +57,7 @@ def poster(title,tag_line,input_file, output_file=''):
 
 
 
-def title_tagline_news(title,tag_line,input_file, output_file=''):
+def title_tagline_news(input_file,title='',tag_line='', output_file=''):
     repo_path = get_path()
 
     if output_file == '':
@@ -101,8 +101,11 @@ def title_tagline_news(title,tag_line,input_file, output_file=''):
     return(out)
     
     
-def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666), title_font_size='', tag_font_size='', title_width_ratio='', border_width='', logo_border='', border_color='red', title_text_font = '', tag_text_font = '', tag_width_ratio='', tag_cord='', focus='',fb_logo = 'awakenedindian.in' , tw_logo = 'Awakened_Ind', logo = True ,*args, **kwargs):
-
+def quote(input_file='',title='',tag_line='', output_file='', title_cord = (0.035,0.666), title_font_size='', tag_font_size='', title_width_ratio='', border_width='', logo_border='', border_color='red', title_text_font = '', tag_text_font = '', tag_width_ratio='', tag_cord='', focus='',fb_logo = 'awakenedindian.in' , tw_logo = 'Awakened_Ind', logo = True ,*args, **kwargs):
+    if input_file =='':
+        print('Please input the file name(or complete file path)')
+        return (0)
+        
     repo_path = get_path()
     if output_file == '':
         output_file = str(datetime.datetime.now()) + '.png'
@@ -134,9 +137,9 @@ def quote(title,tag_line,input_file, output_file='', title_cord = (0.035,0.666),
     draw = ImageDraw.Draw(img)
     w,h = draw.textsize(title, font=font_title)
     ### Do not edit below unless you know the exact working of the functions
-    if focus == 'centre':
+    if (focus == 'centre') or (focus == 'center'):
         out = a.get_vignet_face('_resize.png',fxy='centre' )
-    elif focus == 'false':
+    elif (focus == 'false') or (focus == 'False') or (focus == False):
         out = '_resize.png'
     else:
         out = a.get_vignet_face('_resize.png' )
@@ -172,8 +175,11 @@ def add_border(input_image, output_image, border, border_color='black'):
     bimg.save(output_image)
     print (output_image)
 
-def put_quote(input_file_orig, black_strip_dims=(0,0,0,0), *args, **kwargs):
-    in_img = input_file_orig
+def put_quote(input_file='', black_strip_dims=(0,0,0,0), *args, **kwargs):
+    if input_file=='':
+        print ('Please input the file name')
+        return (0)
+    in_img = input_file
     img = Image.open(in_img)
     W,H = img.size
     a = black_strip_dims
@@ -182,3 +188,6 @@ def put_quote(input_file_orig, black_strip_dims=(0,0,0,0), *args, **kwargs):
                output_image='bordered.jpg',
                border=border_len)
     quote(input_file='bordered.jpg', *args,**kwargs)
+
+def q1(input_file='1.jpg'):
+    put_quote(input_file)
