@@ -37,14 +37,12 @@ Use the specific version number to get the particular version of the package
 
 ```
 pip install saenews==<version_number>
-
 ```
 
-As of now the latest version is `1.2.0` so use.
+As of now the latest version is `1.2.0` so use 
 
 ```
 pip install saenews==1.2.0
-
 ```
 
 (installation may take 5-10 mins)
@@ -136,6 +134,12 @@ black_strip_dims=(0,0,0,0.5)
 
 This will add an addition black strip at the bottom of height `0.5*H`. 
 
+Example :
+
+```python
+from saenews.utils import quote, put_quote
+put_quote('image.jpg',black_strip_dims=(0,0,0,0.5))
+``` 
 
 
 ## Adding quotes or title/ tagline
@@ -187,6 +191,13 @@ Tagline has exactly the same features but the font is different. You can infact 
 |logo|Add logo or not|Boolean|True|logo=False|
 |focus|Where to Focus?(Vignette)|string|''(Searches for face. If it does not get then focusses on center)|Other values : 'center'(focus on center),'false' (False will not focus)|
 
+# Contribute
+
+To contribute : please clone the repo. Make a branch and send a pull request.
+
+If you find any bugs ask in the Issues sections ![here](https://github.com/dheerajmpai/saenews/issues)
+
+If you think any new feature is to be added ask that too in the issues section ![here](https://github.com/dheerajmpai/saenews/issues)
 
 ### Updates
 
