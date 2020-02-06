@@ -7,6 +7,7 @@ saenews/Untitled.ipynb
 saenews/__init__.py
 saenews/dcsdcsdcdscsdc
 saenews/haarcascade_frontalface_default.xml
+saenews/image_template.py
 saenews/insta.py
 saenews/new.py
 saenews/new.py~
