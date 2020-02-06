@@ -185,7 +185,16 @@ Tagline has exactly the same features but the font is different. You can infact 
 |tag_width_ratio|Width of the tagline (Normalised)|Float|''|0.9||
 |tag_text_font|Font used in the text|string containing path to Font File|(Required only when you want to change to new font)|'./Arial.otf'|
 
+Example :
 
+```python
+from saenews.utils import quote, put_quote
+title = "Be the change you want to see!"
+tag_line = "-- Mahatma Gandhi"
+put_quote(input_file='image.jpg', title=title, tag_line=tag_line, title_cord=(0.035, 0.666), title_font_size=80,  title_width_ratio=0.9)
+```
+
+<img src="/ex/7.png" alt="drawing" width="400"/>
 # Other features
 
 ## Change Border Color, No Logo, Focussing etc.
