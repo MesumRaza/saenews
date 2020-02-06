@@ -125,7 +125,9 @@ You can add a black strip at the bottom so you can put an additional quote there
 
 There is an another argument to control the width of the blackstrip.
 
+```
 black_strip_dims=(left, top, right, bottom)
+```
 Where in the place of left, top etc. we need to pass the ratio by which the black strip should be extended out of image. (Examples will make it very clear). 
 
 Suppose the image height is `H` and width is `W`. You can add a black strip at the bottom of with 50% of the height of the current image you will use `0.5` in the fourth place.
