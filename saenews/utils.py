@@ -113,6 +113,7 @@ def quote(input_file='',title='',tag_line='', output_file='', title_cord = (0.03
         output_file = str(datetime.datetime.now()).replace('.','_')
         output_file = output_file.replace(':','_')
         output_file = output_file.replace(' ','_')
+        output_file = output_file.replace('-','_')
         output_file = output_file + '.png'
     a = sae2() # Do not Remove # Class Initiation
     a.input_file = input_file # Name of Input  File
