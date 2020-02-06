@@ -86,7 +86,7 @@ from saenews.utils import quote, put_quote
 put_quote('image.jpg')
 ```
 
-![Image](/ex/2020-02-06 16:06:25.898632.png)
+![Image](/ex/6.png)
 The final image would be saved in the directory in the format <Current Date and time>.png . It will also be displayed on the terminal. There will be a lot of other intermediate images for references which you can delete.
 
 The current version the default handles are of Awakened Indian. If you need to change them you need to pass additional arguments. Following is an example where I am using the code for sae.news. 
