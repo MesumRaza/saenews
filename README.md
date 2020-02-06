@@ -2,56 +2,20 @@
 
 # For Quickstart go ![here](https://github.com/dheerajmpai/saenews/OLDREADME.md)
 
-### Installation
 
-
-Install via pip
-
-```bash
-pip install saenews
-```
-
-or install a specific version
-
-```bash
-pip install saenews==1.2.0
-```
-
-# Example
-
-Download the image you want to modify 
-
-example code to add a title and tagline to the image (Here Image is saved as `image.jpg`)
-
-```python
-
-from saenews.utils import *
-title_tagline_news(title='Title',tag_line='Tag Line',input_file='image.jpg')
-
-```
-
-Original Image 
-
-![alt text](http://sae.news/developer_tools/qq.jpg)
-
-Final Image
-
-![alt text](http://sae.news/developer_tools/qq.png)
-
-
-Installing Python
+# Installing Python
 
 The package runs on python3 (3.5+). It is recomended to use anaconda if you are on Windows or Ubuntu. Anaconda is a package distributer. It creates "Virtual Environments" and hence safer as it does not alter the core Python installation of the system. Miniconda, as the name says, is a minimal version of anaconda. If you are not a regular user of python use Miniconda.
 
-# Installing Miniconda
+## Installing Miniconda
 
-https://docs.conda.io/en/latest/miniconda.html
+![Official Release of Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
-Choose the relevant version (Windows, Linux or Mac)
+1. Download the relevant version (Windows, Linux or Mac, 64 or 32 bit)
 
-For Windows : Execute the .exe file.
+2. For Windows : Execute the .exe file.
 
-For Linux :
+### For Linux :
 
 1. Download the file 
 2. Go to the folder you had downloaded
@@ -64,18 +28,18 @@ For Linux :
 
 # Installing Image editing library
 
-For Windows : Open the Anaconda Prompt.
-For Linux : Open Terminal
+- For Windows : Open the Anaconda Prompt.
+- For Linux : Open Terminal
 
 Install the package using `pip`. `pip` is a package installer (Kind of Software installer you can say). It will download the version that is compatible with your computer and installs it. Essentially it automates the installation process. The user need not care about the manual installation. 
 
 Use the specific version number to get the particular version of the package
 
-`pip install saenews==<version_number>`
+```pip install saenews==<version_number>```
 
 As of now the latest version is `1.2.0` so use.
 
-`pip install saenews==1.2.0`
+```pip install saenews==1.2.0```
 
 (installation may take 5-10 mins)
 
