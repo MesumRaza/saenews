@@ -35,11 +35,17 @@ Install the package using `pip`. `pip` is a package installer (Kind of Software 
 
 Use the specific version number to get the particular version of the package
 
-```pip install saenews==<version_number>```
+```
+pip install saenews==<version_number>
+
+```
 
 As of now the latest version is `1.2.0` so use.
 
-```pip install saenews==1.2.0```
+```
+pip install saenews==1.2.0
+
+```
 
 (installation may take 5-10 mins)
 
