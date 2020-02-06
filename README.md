@@ -96,7 +96,7 @@ from saenews.utils import put_quote
 put_quote('image.jpg', fb_logo='www.sae.news', tw_logo='saenews_')
 ```
 <img src="/ex/5.png" alt="drawing" width="400"/>
-![Image](/ex/5.png)
+
 Note that it has also put a border. To remove the border use an argument `border_width=0`'
 
 ```python
@@ -104,7 +104,7 @@ from saenews.utils import quote, put_quote
 put_quote('image.jpg', border_width=0)
 ```
 <img src="/ex/4.png" alt="drawing" width="400"/>
-![Image](/ex/4.png)
+
 ## Repeating with a `for` loop
 
 Suppose the name of the images are `image1.jpg` , `image2.jpg`, `image3.jpg`, `image4.jpg` we can do all the four at one shot.
@@ -145,7 +145,7 @@ from saenews.utils import quote, put_quote
 put_quote('image.jpg',black_strip_dims=(0,0,0,0.5))
 ``` 
 <img src="/ex/3.png" alt="drawing" width="400"/>
-![Image](/ex/3.png)
+
 
 ## Adding quotes or title/ tagline
 
