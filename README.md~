@@ -207,9 +207,9 @@ Tagline has exactly the same features but the font is different. You can infact 
 |tag_text_font|Font used in the text|string containing path to Font File|(Required only when you want to change to new font)|'./Arial.otf'|
 
 
-## Other features
+# Other features
 
-### Change Border Color, No Logo, Focussing etc.
+## Change Border Color, No Logo, Focussing etc.
 
 | arg    | Description | Datatype | Default Value| Example |
 | ----------- | ----------- | -------- | ----------- | --- |
@@ -217,21 +217,21 @@ Tagline has exactly the same features but the font is different. You can infact 
 |logo|Add logo or not|Boolean|True|logo=False|
 |focus|Where to Focus?(Vignette)|string|''(Searches for face. If it does not get then focusses on center)|Other values : 'center'(focus on center),'false' (False will not focus)|
 
-### Features
 
 ### Updates
 
-### Bugfixes
+# Issues and feature requests
 
-Do Visit our website <a href="https://sae.news"> SAE NEWS</a>
+If you find any bug or if you find any feature missing. Raise an issue ![here](https://github.com/dheerajmpai/saenews/issues)
 
 ## Older verion of README 
 
 ![here](https://github.com/dheerajmpai/saenews/OLDREADME.md)
 
-# Issues and feature requests
 
-If you find any bug or if you find any feature missing. Raise an issue ![here](https://github.com/dheerajmpai/saenews/issues)
+
+
+Do Visit our website <a href="https://sae.news"> SAE NEWS</a>
 
 
 
