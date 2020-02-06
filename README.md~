@@ -85,7 +85,7 @@ For namesake I am considering the image name to be `image.jpg`. But change it ac
 from saenews.utils import quote, put_quote
 put_quote('image.jpg')
 ```
-
+<img src="/ex/6.png" alt="drawing" width="200"/>
 ![Image](/ex/6.png)
 The final image would be saved in the directory in the format <Current Date and time>.png . It will also be displayed on the terminal. There will be a lot of other intermediate images for references which you can delete.
 
