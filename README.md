@@ -85,9 +85,9 @@ For namesake I am considering the image name to be `image.jpg`. But change it ac
 from saenews.utils import quote, put_quote
 put_quote('image.jpg')
 ```
-<img src="/ex/6.png" alt="drawing" width="200"/>
-![Image](/ex/6.png)
-The final image would be saved in the directory in the format <Current Date and time>.png . It will also be displayed on the terminal. There will be a lot of other intermediate images for references which you can delete.
+<img src="/ex/6.png" alt="drawing" width="400"/>
+
+The final image would be saved in the directory in the format "Current Date and time".png . It will also be displayed on the terminal. There will be a lot of other intermediate images for references which you can delete.
 
 The current version the default handles are of Awakened Indian. If you need to change them you need to pass additional arguments. Following is an example where I am using the code for sae.news. 
 
@@ -95,7 +95,7 @@ The current version the default handles are of Awakened Indian. If you need to c
 from saenews.utils import put_quote
 put_quote('image.jpg', fb_logo='www.sae.news', tw_logo='saenews_')
 ```
-
+<img src="/ex/5.png" alt="drawing" width="400"/>
 ![Image](/ex/5.png)
 Note that it has also put a border. To remove the border use an argument `border_width=0`'
 
@@ -103,6 +103,7 @@ Note that it has also put a border. To remove the border use an argument `border
 from saenews.utils import quote, put_quote
 put_quote('image.jpg', border_width=0)
 ```
+<img src="/ex/4.png" alt="drawing" width="400"/>
 ![Image](/ex/4.png)
 ## Repeating with a `for` loop
 
@@ -143,6 +144,7 @@ Example :
 from saenews.utils import quote, put_quote
 put_quote('image.jpg',black_strip_dims=(0,0,0,0.5))
 ``` 
+<img src="/ex/3.png" alt="drawing" width="400"/>
 ![Image](/ex/3.png)
 
 ## Adding quotes or title/ tagline
@@ -168,8 +170,8 @@ from saenews.utils import quote, put_quote
 title = "Be the change you want to see!"
 put_quote(input_file='image.jpg', title=title, title_cord=(0.035, 0.666), title_font_size=80,  title_width_ratio=0.9)
 ```
-![Image](/ex/2.png =100x20)
-<img src="/ex/2.png" alt="drawing" width="200"/>
+<img src="/ex/2.png" alt="drawing" width="400"/>
+
 ## Adding Tagline. 
 
 Tagline has exactly the same features but the font is different. You can infact put the title twice. Tagline is used just for convinience.
