@@ -96,13 +96,14 @@ from saenews.utils import put_quote
 put_quote('image.jpg', fb_logo='www.sae.news', tw_logo='saenews_')
 ```
 
+![Image](/ex/5.png)
 Note that it has also put a border. To remove the border use an argument `border_width=0`'
 
 ```python
 from saenews.utils import quote, put_quote
 put_quote('image.jpg', border_width=0)
 ```
-
+![Image](/ex/4.png)
 ## Repeating with a `for` loop
 
 Suppose the name of the images are `image1.jpg` , `image2.jpg`, `image3.jpg`, `image4.jpg` we can do all the four at one shot.
@@ -142,7 +143,7 @@ Example :
 from saenews.utils import quote, put_quote
 put_quote('image.jpg',black_strip_dims=(0,0,0,0.5))
 ``` 
-
+![Image](/ex/3.png)
 
 ## Adding quotes or title/ tagline
 
@@ -167,7 +168,7 @@ from saenews.utils import quote, put_quote
 title = "Be the change you want to see!"
 put_quote(input_file='image.jpg', title=title, title_cord=(0.035, 0.666), title_font_size=80,  title_width_ratio=0.9)
 ```
-
+![Image](/ex/2.png)
 ## Adding Tagline. 
 
 Tagline has exactly the same features but the font is different. You can infact put the title twice. Tagline is used just for convinience.
