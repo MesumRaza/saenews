@@ -203,11 +203,38 @@ The title and tagline takes few arguments.
 |title_text_font|Font used in the text|string containing path to Font File|(Required only when you want to change to new font)|'./Arial.otf'|
 
 
+#### Example :
+
+```python
+
+from saenews.utils import quote, put_quote
+title = "Be the change you want to see!"
+quote(input_file='image.jpg', title=title, title_cord=(0.035, 0.666), title_font_size=80,  title_width_ratio=0.9)
+```
+
+## Adding Tagline. 
+
+Tagline has exactly the same features but the font is different. You can infact put the title twice. Tagline is used just for convinience.
 
 
-======================================================================================================
-Below are Unedited
-======================================================================================================
+| arg    | Description | Datatype | Default Value| Example |
+| ----------- | ----------- | -------- | ----------- | --- |
+| tag_line      | Tagline text | string | '' | '-Mahatma Gandhi' |
+| tag_cord   | Normalised cordinates of the beginning of the title | tupple (float,float)| Auto set based on the height and width of Title | (0.035,0.666) |
+| tag_font_size | Size of the font(Not normalised)| int/float| '' | 55 |
+|tag_width_ratio|Width of the tagline (Normalised)|Float|''|0.9||
+|tag_text_font|Font used in the text|string containing path to Font File|(Required only when you want to change to new font)|'./Arial.otf'|
+
+
+## Other features
+
+### Change Border Color, No Logo, Focussing etc.
+
+| arg    | Description | Datatype | Default Value| Example |
+| ----------- | ----------- | -------- | ----------- | --- |
+|border_color|Change the color of border|string|red|orange|
+|logo|Add logo or not|Boolean|True|logo=False|
+|focus|Where to Focus?(Vignette)|string|''(Searches for face. If it does not get then focusses on center)|Other values : 'center'(focus on center),'false' (False will not focus)|
 
 ### Features
 
