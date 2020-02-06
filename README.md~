@@ -14,27 +14,8 @@ pip install saenews
 or install a specific version
 
 ```bash
-pip install saenews==1.1.7
+pip install saenews==1.2.0
 ```
-
-### Downloading utilities
-
-#### Update : No need to download from version 1.1.0 - utilites come with the repository itself
-
-The code will assume the fonts are available in the `./fonts/` directory. You can change it by passing `text_font` argument in everyfunction
-
-Download the utilities like fonts and social media icons from https://github.com/dheerajmpai/saenews/raw/master/utils.zip
-
-```bash
-
-wget https://github.com/dheerajmpai/saenews/raw/master/utils.zip
-unzip utils.zip
-
-```
-# Issues and feature requests
-
-If you find any bug or if you find any feature missing. Raise an issue ![here](https://github.com/dheerajmpai/saenews/issues)
-
 
 # Example
 
@@ -129,7 +110,7 @@ from saenews.utils import quote, put_quote
 ```
 (The second command checks if the functions are imported or not)
 
-### Putting Twitter and Facebook handles
+## Putting Twitter and Facebook handles
 For namesake I am considering the image name to be `image.jpg`. But change it accordingly.
 
 ```python
@@ -203,7 +184,7 @@ The title and tagline takes few arguments.
 |title_text_font|Font used in the text|string containing path to Font File|(Required only when you want to change to new font)|'./Arial.otf'|
 
 
-#### Example :
+## Example :
 
 ```python
 
@@ -234,7 +215,7 @@ Tagline has exactly the same features but the font is different. You can infact 
 | ----------- | ----------- | -------- | ----------- | --- |
 |border_color|Change the color of border|string|red|orange|
 |logo|Add logo or not|Boolean|True|logo=False|
-|focus|Where to Focus?(Vignette)|string|''(Searches for face. If it does not get then focusses on center)|Other values : 'center','false' (False will not focus)|
+|focus|Where to Focus?(Vignette)|string|''(Searches for face. If it does not get then focusses on center)|Other values : 'center'(focus on center),'false' (False will not focus)|
 
 ### Features
 
@@ -243,4 +224,14 @@ Tagline has exactly the same features but the font is different. You can infact 
 ### Bugfixes
 
 Do Visit our website <a href="https://sae.news"> SAE NEWS</a>
+
+## Older verion of README 
+
+![here](https://github.com/dheerajmpai/saenews/OLDREADME.md)
+
+# Issues and feature requests
+
+If you find any bug or if you find any feature missing. Raise an issue ![here](https://github.com/dheerajmpai/saenews/issues)
+
+
 
