@@ -1,6 +1,6 @@
 [![Downloads](https://pepy.tech/badge/saenews)](https://pepy.tech/project/saenews)
 
-# Quickstart
+# For Quickstart go ![here](https://github.com/dheerajmpai/saenews/OLDREADME.md)
 
 ### Installation
 
